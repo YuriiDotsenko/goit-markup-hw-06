@@ -68,41 +68,66 @@
             <h2 class="main-form-title">
               Оставте свои данные, ми вам перезвоним
             </h2>
-            <ul>
-              <li class="size-with-li">
-                <form>
-                  <label class="hero-label" for="name">Имя</label>
-                  <input class="hero-input" type="text" name="name" id="name" />
-                </form>
-              </li>
+            <form class="form">
+              <div class="form-field">
+                <input
+                  class="form-input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder=" "
+                />
+                <label class="form-label" for="name">Имя</label>
+                <span class="icon-hero">
+                  <svg width="18px" height="18px">
+                    <use href="./img/sprite.svg#person-black"></use>
+                  </svg>
+                </span>
+              </div>
 
-              <li class="size-with-li">
-                <form>
-                  <label class="hero-label" for="tel">Телефон</label>
-                  <input class="hero-input" type="tel" name="tel" id="tel" />
-                </form>
-              </li>
+              <div class="form-field">
+                <input
+                  class="form-input"
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  placeholder=" "
+                />
+                <label class="form-label" for="tel">Телефон</label>
+                <span class="icon-hero">
+                  <svg width="18px" height="18px">
+                    <use href="./img/sprite.svg#phone-black"></use>
+                  </svg>
+                </span>
+              </div>
 
-              <li class="size-with-li">
-                <form>
-                  <label class="hero-label" for="mail">Почта</label>
-                  <input
-                    class="hero-input"
-                    type="email"
-                    name="mail"
-                    id="mail"
-                  />
-                </form>
-              </li>
+              <div class="form-field">
+                <input
+                  class="form-input"
+                  type="email"
+                  name="mail"
+                  id="mail"
+                  placeholder=" "
+                />
+                <label class="form-label" for="mail">Почта</label>
+                <span class="icon-hero">
+                  <svg width="18px" height="18px">
+                    <use href="./img/sprite.svg#email-black"></use>
+                  </svg>
+                </span>
+              </div>
+              <div>
+                <textarea
+                  class="form-messege"
+                  name=""
+                  id=""
+                  placeholder="Комментарий"
+                ></textarea>
+                <label class="" for=""></label>
+              </div>
+            </form>
 
-              <li>
-                <form>
-                  <textarea name="" id="" cols="30" rows="10"></textarea>
-                  <label class="hero-label-comments" for="">Комментарий</label>
-                </form>
-              </li>
-            </ul>
-            <button class="button">Отправить</button>
+            <button type="submit" class="button">Отправить</button>
           </div>
         </section>
       </div>
