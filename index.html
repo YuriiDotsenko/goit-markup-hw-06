@@ -63,12 +63,18 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="button">Заказать услугу</button>
-          <div class="madal">
-            <h2 class="main-form-title">
-              Оставте свои данные, ми вам перезвоним
-            </h2>
+          <button data-modal-open class="button">Заказать услугу</button>
+          <div data-modal class="backdrop is-hidden">
             <form class="form">
+              <h2 class="main-form-title">
+                Оставте свои данные, ми вам перезвоним
+              </h2>
+              <button data-modal-close class="close-button">
+                <svg width="18px" height="18px">
+                  <use href="./img/sprite.svg#close-black"></use>
+                </svg>
+              </button>
+
               <div class="form-field">
                 <input
                   class="form-input"
@@ -123,11 +129,29 @@
                   id=""
                   placeholder="Комментарий"
                 ></textarea>
-                <label class="" for=""></label>
-              </div>
-            </form>
 
-            <button type="submit" class="button">Отправить</button>
+                <label class="label" for="checkbox" class="modal-form-label">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="checkbox"
+                    value="checkbox"
+                    id="checkbox"
+                  />
+                  <span class="checkbox-icon">
+                    <svg class="checkbox-icon-svg">
+                      <use href="./img/symbol-defs.svg#icon-check"></use>
+                    </svg>
+                  </span>
+
+                  <span class="form-condition-modal"
+                    >Соглашаюсь с рассылкой и принимаю
+                    <a href="#" class="conditions">Условия договора</a>
+                  </span>
+                </label>
+              </div>
+              <button type="submit" class="button">Отправить</button>
+            </form>
           </div>
         </section>
       </div>
@@ -545,5 +569,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
