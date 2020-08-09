@@ -206,8 +206,12 @@ p {
 }
 
 .button {
+  border: none;
   margin-bottom: 200px;
   margin-top: 30px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .button,
@@ -255,6 +259,7 @@ p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-button {
@@ -269,6 +274,7 @@ p {
   box-sizing: border-box;
   text-align: center;
   justify-content: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-button:hover {
@@ -299,7 +305,7 @@ p {
   left: 15%;
   transform: translateY(-50%);
 
-  transition: 250ms linear;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
@@ -322,6 +328,7 @@ p {
   top: 50%;
   left: 10%;
   transform: translateY(-50%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus ~ .icon-hero {
@@ -368,11 +375,14 @@ p {
 }
 
 .checkbox-icon {
+  position: absolute;
+  display: flex;
   left: 50px;
-  bottom: 126px;
+  bottom: 125px;
   border: 2px solid #212121;
   border-radius: 2px;
-  align-items: baseline;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label {
@@ -380,15 +390,10 @@ p {
 }
 
 .checkbox:checked + .checkbox-icon {
-  display: flex;
   border-color: #2196f3;
   background-color: #2196f3;
   background-size: contain;
   background-origin: border-box;
-}
-
-.checkbox-icon {
-  position: absolute;
 }
 
 .conditions {
@@ -717,11 +722,6 @@ p {
   color: var(--title-dark-theme-color);
 }
 
-.rozmitka {
-  display: flex;
-  align-items: baseline;
-}
-
 .input {
   width: 358px;
   height: 50px;
@@ -734,14 +734,16 @@ p {
 }
 
 .footer-form {
+  display: flex;
+
   margin-top: 20px;
-  margin-right: 12px;
 }
 
 .button-footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 12px;
 }
 
 .button-twit {
