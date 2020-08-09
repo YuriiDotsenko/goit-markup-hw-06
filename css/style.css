@@ -368,13 +368,11 @@ p {
 }
 
 .checkbox-icon {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
   left: 50px;
   bottom: 126px;
   border: 2px solid #212121;
   border-radius: 2px;
+  align-items: baseline;
 }
 
 .label {
@@ -385,16 +383,8 @@ p {
   display: flex;
   border-color: #2196f3;
   background-color: #2196f3;
-  width: 15px;
-  height: 15px;
   background-size: contain;
   background-origin: border-box;
-}
-
-.checkbox {
-  position: absolute;
-  left: 50px;
-  bottom: 128px;
 }
 
 .checkbox-icon {
