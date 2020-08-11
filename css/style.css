@@ -215,7 +215,8 @@ p {
 }
 
 .button,
-.button-footer {
+.button-footer,
+.button-modal {
   border-radius: 4px;
   min-width: 200px;
   text-align: center;
@@ -233,8 +234,19 @@ p {
 
 /*MADAL*/
 
+.backdrop {
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%);
+  max-width: 100%;
+  max-height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 103;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .main-form-title {
-  margin-top: 40px;
   margin-bottom: 30px;
   font-family: Roboto;
   font-style: normal;
@@ -247,36 +259,12 @@ p {
   color: #212121;
 }
 
-.overlay {
-  position: relative;
-}
-
-.backdrop {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 100;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.close-button-svg {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 18px;
-  height: 18px;
-}
-
 .close-button {
   position: absolute;
-  display: flex;
   width: 30px;
   height: 30px;
-  top: 8px;
-  right: 8px;
+  top: 10px;
+  left: 220px;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
@@ -284,6 +272,21 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 101;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.close-button-svg {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
 }
 
 .close-button:hover {
@@ -294,6 +297,7 @@ p {
   position: absolute;
   width: 528px;
   height: 581px;
+  padding: 40px;
   top: 10%;
   left: 50%;
   transform: translate(-50%);
@@ -311,14 +315,14 @@ p {
 .form-label {
   position: absolute;
   top: 50%;
-  left: 15%;
+  left: 11%;
   transform: translateY(-50%);
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
-  width: 448px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -335,7 +339,7 @@ p {
   position: absolute;
   display: inline-block;
   top: 50%;
-  left: 10%;
+  left: 5%;
   transform: translateY(-50%);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -348,6 +352,7 @@ p {
 .form-input:not(:placeholder-shown) + .form-label {
   color: #2196f3;
   transform: translateY(-40px);
+  left: 22px;
 }
 
 .form-messege {
@@ -367,12 +372,6 @@ p {
 .form-messege:focus {
   outline: none;
   border-color: #2196f3;
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 .checkbox {
@@ -405,8 +404,24 @@ p {
   background-origin: border-box;
 }
 
+.form-condition-modal {
+  position: absolute;
+  left: 85px;
+  bottom: 125px;
+}
+
 .conditions {
   color: #2196f3;
+}
+
+.button-modal {
+  position: absolute;
+  left: 160px;
+  bottom: 40px;
+  border: none;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /*our advantages*/
