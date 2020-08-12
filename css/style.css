@@ -258,12 +258,17 @@ p {
   color: #212121;
 }
 
+.modal {
+  position: relative;
+}
+
 .close-button {
   position: absolute;
+  top: 12%;
+  left: 66%;
+  transform: translate(-50%);
   width: 30px;
   height: 30px;
-  top: 8px;
-  right: 8px;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
@@ -281,9 +286,8 @@ p {
 }
 
 .close-button-svg {
-  position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 0px;
+  left: 0px;
   width: 18px;
   height: 18px;
 }
@@ -294,7 +298,7 @@ p {
 
 .form {
   position: absolute;
-  width: 528px;
+  max-width: 528px;
   height: 581px;
   padding: 40px;
   top: 10%;
